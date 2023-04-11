@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: linear-gradient(to right,#341353 ,#360638, #950d0d, #000000);
+}
+header{
+    background: black url("./images/THJJRUhNlEc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form button{
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-size: 1em;
+}
+form input{
+    width: 350px;
+}
+form button{
+    background-color: orange;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px black;
+    box-shadow: 0px 0px 10px orange;
+}
+form button:active{
+    transform: scale(0.9);
+   
+}
+main{
+    margin-top: 1em;
+    padding: 2.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-gap: 2em;
+   
+}
+header h3:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 0px 10px red;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.star{
+    margin-right: 0.5em;
+}
+.star{
+    color: orange;
+}
+.movie-card{
+   
+    
+    display: grid;
+    color: white;
+    grid-template:  1em auto auto auto auto 1em /  250px 1em auto auto auto 1em ;
+    grid-template-areas: 
+    "image . . . . ."
+    "image . title title imdb ."
+    "image . actors actors . ."
+    "image . genre . watchlist ."
+    "image . plot plot plot ."
+    "image . . . . .";
+    
+    line-height: 1.5;
+    background: linear-gradient(to right,#000000 ,#4a4747);
+    border-radius: 10px;
+
+}
+.movie-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 50px white;
+
+}
+.explore-cinema{
+    height: 300px;
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(84, 83, 83);
+}
+.explore-cinema i{
+    font-size: 10em
+}
+.explore-cinema p{
+    font-size: 2.5em;
+    margin: 0;
+    color: #8d8d8d;
+}
+.empty-watch-list{
+    height: 300px;
+    text-align: center;
+    margin-top: 150px;
+    color:white;
+    text-shadow: 0px 0px 3px black;
+}
+.empty-watch-list a{
+    color: green;
+    padding: 0.25em;
+    text-decoration: underline; 
+}
+.empty-watch-list a:hover{
+    color: rgb(1, 83, 1);
+}
+.image{
+    width: 100%;
+    height: 100%;
+    grid-area: image;
+    object-fit: cover;
+    
+}
+.imdb{
+    grid-area: imdb;
+    justify-self: end;
+    /* align-self: start; */
+    margin: 0;
+    
+   
+}
+.title{
+    grid-area: title;
+    /* align-self: start; */
+    margin: 0;
+    
+}
+.plot{
+    grid-area: plot;
+  
+}
+.genre{
+    grid-area: genre;
+ 
+}
+.actors{
+    grid-area: actors;
+    
+}
+.watchlist{
+    grid-area: watchlist;
+    justify-self: end;
+}
+.watchlist:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.check{
+    color: green;
+    font-size: 1.1em;
+
+}
+/* MediaQuery */
+
+@media (max-width: 600px){
+  
+    main{
+        /* display: flex;
+        flex-direction: column; */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .movie-card{
+    /* margin: 0 auto; */
+    grid-template: 350px 1em auto 50px 50px auto 1em / 1em auto auto 1em;
+    
+    grid-template-areas: 
+    "image image image image"
+    ". . . ."
+    ". title imdb . "
+    ". genre watchlist ."
+    ". actors actors ."
+    ". plot plot ."
+    ". . . .";
+       
+    }
+    
+    .h1-movie{
+        display: block;
+        color: red;
+        text-shadow: 0px 0px 10px green;
+    }
+    .h1-for-you{
+        color: green;
+        text-shadow: 0px 0px 10px blue;
+    }
+    h1{
+        text-align: center;
+        text-shadow: 0px 0px 10px red;
+    }
+    header form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
