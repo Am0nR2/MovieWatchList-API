@@ -6,12 +6,14 @@ let watchList = JSON.parse(localStorage.getItem("watchList")) ? JSON.parse(local
 let watchListMovieIDS = JSON.parse(localStorage.getItem("watchListMovieIDS")) ? JSON.parse(localStorage.getItem("watchListMovieIDS")) : []
 
 if (renderedMovies.length === 0){
+    if(document.getElementById("main-movie-list")){
     document.getElementById("main-movie-list").innerHTML = `
     <div class="explore-cinema">
         <i class="fa-solid fa-film"></i>
         <p>Start To Explore</p>
     </div>
     `
+}
 }
 document.addEventListener("click", function(e){
     if(e.target.dataset.watch){
