@@ -172,7 +172,7 @@ a{
     }
     .movie-card{
     /* margin: 0 auto; */
-    grid-template: 350px 1em auto 50px 50px auto 1em / 1em auto auto 1em;
+    grid-template: auto 1em auto 50px 50px auto 1em / 1em auto auto 1em;
     
     grid-template-areas: 
     "image image image image"
